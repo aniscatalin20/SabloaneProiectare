@@ -1,4 +1,4 @@
-package ro.uvt;
+package ro.uvt.models;
 
 import java.util.concurrent.TimeUnit;
 
@@ -15,11 +15,14 @@ public class Imagine implements Element{
         }
     }
 
+    @Override
+    public void accept(Visitor v) {
 
-
-    public void render(){
-        System.out.format("Imagine %s \n", nume);
     }
+
+    //    public void render(){
+//        System.out.format("Imagine %s \n", nume);
+//    }
 
 
 }

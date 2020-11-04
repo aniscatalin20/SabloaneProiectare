@@ -1,4 +1,4 @@
-package ro.uvt;
+package ro.uvt.models;
 
 public class Autor {
     private String nume;

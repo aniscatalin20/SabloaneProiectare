@@ -1,8 +1,6 @@
-package ro.uvt;
+package ro.uvt.models;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Vector;
 
 public class Carte extends Section{
     // Atribute------------------------------------
@@ -30,12 +28,10 @@ public class Carte extends Section{
     public List<Autor> getAutori() {
         return autori;
     }
-    @Override
-    public  void render(){
-        System.out.println(this.getTitlu());
-        System.out.println(autori);
-        getContent().forEach(Element::render);
 
+    @Override
+    public void accept(Visitor v) {
+        v.visitBook(this);
     }
 
 }

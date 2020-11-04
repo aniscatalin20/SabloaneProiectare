@@ -1,8 +1,6 @@
-package ro.uvt;
+package ro.uvt.models;
 
-import java.util.Collection;
-
-public interface Element {
+public interface Element extends Visitee{
     //atribute
     //metode
 
@@ -18,5 +16,5 @@ public interface Element {
     {
         throw new UnsupportedOperationException();
     };
-    void render();
+    //void render();
 }

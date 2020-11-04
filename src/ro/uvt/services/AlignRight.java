@@ -1,4 +1,6 @@
-package ro.uvt;
+package ro.uvt.services;
+
+import ro.uvt.models.Paragraf;
 
 public class AlignRight implements AlignStrategy{
 
