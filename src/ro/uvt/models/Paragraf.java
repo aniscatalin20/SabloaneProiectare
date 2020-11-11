@@ -27,6 +27,7 @@ public class Paragraf implements Element, Visitee{
         this.align = align;
     }
 
+
     public String getText() {
         return text;
     }

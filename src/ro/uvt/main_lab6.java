@@ -1,4 +1,6 @@
-package ro.uvt.models;
+package ro.uvt;
+
+import ro.uvt.models.*;
 
 public class main_lab6 {
     public static void main(String[] args) throws Exception {
@@ -16,9 +18,14 @@ public class main_lab6 {
         cap1.add(new Paragraf("Some text"));
         cap1.add(new Tabel("Table 1"));
 
-//        BookStatistics stats = new BookStatistics();
-//        cap1.accept(stats);
-//        stats.printStatistics();
+        BookStatistics stats = new BookStatistics();
+
+        cap1.accept(stats);
+        stats.printStatistics();
+
+        //new FileExporterWithVisitor("accounts2.json", new JsonVisitor()).export(carte);
+
+        //carte.accept(new BookSaveVisitor("carte.json"));
     }
 
 }

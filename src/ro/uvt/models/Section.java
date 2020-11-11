@@ -1,10 +1,13 @@
 package ro.uvt.models;
 
+import ro.uvt.services.AlignStrategy;
+
 import java.util.List;
 import java.util.ArrayList;
-public class Section implements Element, Visitee{
+public class Section implements Element, Visitee, AlignStrategy {
 
     private String sectionTitle;
+    private AlignStrategy align;
     private List<Element> content;
     public Section() {
         this(null);
@@ -17,6 +20,9 @@ public class Section implements Element, Visitee{
 
     }
 
+    public AlignStrategy getAlign() {
+        return align;
+    }
 
     public String getSectionTitle() {
         return sectionTitle;
@@ -40,6 +46,7 @@ public class Section implements Element, Visitee{
         return content.get(i);
     }
 
+
     protected List<Element> getContent() {
         return content;
     }
@@ -53,5 +60,10 @@ public class Section implements Element, Visitee{
     @Override
     public void accept(Visitor v) {
         v.visitSection(this);
+    }
+
+    @Override
+    public void render(Paragraf p) {
+
     }
 }

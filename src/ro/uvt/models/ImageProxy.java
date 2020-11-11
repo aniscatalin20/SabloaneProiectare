@@ -1,8 +1,11 @@
 package ro.uvt.models;
 
-public class ImageProxy implements Element {
+import ro.uvt.services.AlignStrategy;
+
+public class ImageProxy implements Element, AlignStrategy {
     String imgname;
     Imagine realImage;
+    private AlignStrategy align;
 
 //    @Override
 //    public void render() {
@@ -23,11 +26,20 @@ public class ImageProxy implements Element {
         return realImage;
     }
 
+    public AlignStrategy getAlign() {
+        return align;
+    }
+
     public String getImgname() {
         return imgname;
     }
 
     public void accept(Visitor v) {
         v.visitImageProxy(this);
+    }
+
+    @Override
+    public void render(Paragraf p) {
+
     }
 }

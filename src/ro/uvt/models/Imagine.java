@@ -1,9 +1,12 @@
 package ro.uvt.models;
 
+import ro.uvt.services.AlignStrategy;
+
 import java.util.concurrent.TimeUnit;
 
-public class Imagine implements Element{
+public class Imagine implements Element, AlignStrategy {
     String nume;
+    private AlignStrategy align;
 
 
     public Imagine(String nume) {
@@ -17,10 +20,24 @@ public class Imagine implements Element{
 
     @Override
     public void accept(Visitor v) {
+        v.visitImagine(this);
+        v.visitImagine(this);
 
     }
 
-    //    public void render(){
+    public String getNume() {
+        return nume;
+    }
+
+    public AlignStrategy getAlign() {
+        return align;
+    }
+
+    @Override
+    public void render(Paragraf p) {
+
+    }
+//    public void render(){
 //        System.out.format("Imagine %s \n", nume);
 //    }
 

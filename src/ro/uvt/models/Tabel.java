@@ -1,7 +1,10 @@
 package ro.uvt.models;
 
-public class Tabel implements Element{
+import ro.uvt.services.AlignStrategy;
+
+public class Tabel implements Element, AlignStrategy {
     String nume;
+    private AlignStrategy align;
 
     public Tabel(String nume) {
         this.nume = nume;
@@ -11,6 +14,9 @@ public class Tabel implements Element{
         return nume;
     }
 
+    public AlignStrategy getAlign() {
+        return align;
+    }
     //    @Override
 //    public void render(){
 //        System.out.print("Tabel \n");
@@ -19,5 +25,10 @@ public class Tabel implements Element{
     @Override
     public void accept(Visitor v) {
         v.visitTable(this);
+    }
+
+    @Override
+    public void render(Paragraf p) {
+
     }
 }
