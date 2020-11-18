@@ -21,7 +21,6 @@ public class Imagine implements Element, AlignStrategy {
     @Override
     public void accept(Visitor v) {
         v.visitImagine(this);
-        v.visitImagine(this);
 
     }
 
@@ -35,7 +34,6 @@ public class Imagine implements Element, AlignStrategy {
 
     @Override
     public void render(Paragraf p) {
-
     }
 //    public void render(){
 //        System.out.format("Imagine %s \n", nume);

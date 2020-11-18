@@ -5,9 +5,10 @@ import ro.uvt.models.*;
 public class BookJsonVisitor implements Visitor<String> {
 
 
+
     @Override
     public String visitBook(Carte carte) {
-        return null;
+        return "{\"text\" : \"" + carte.getTitlu() + "\", \"alignment\" : \"" + carte.getAutori() + "\"}";
     }
 
     @Override

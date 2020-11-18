@@ -23,6 +23,7 @@ public class main_lab6 {
         cap1.accept(stats);
         stats.printStatistics();
 
+
         //new FileExporterWithVisitor("accounts2.json", new JsonVisitor()).export(carte);
 
         //carte.accept(new BookSaveVisitor("carte.json"));

@@ -3,21 +3,16 @@ package ro.uvt.models;
 import java.util.List;
 
 public class Carte extends Section{
-    // Atribute------------------------------------
-    private List<Autor> autori;//agregare
+
+    private List<Autor> autori;
 
 
-
-    //----------------------------------------------
-    //Constructori----------------------------------
     public Carte(List < Autor> autori, String titlu) {
         super(titlu);
         this.autori = autori;
 
     }
 
-    //----------------------------------------------
-    //Metode----------------------------------------
 
     public String getTitlu(){return getSectionTitle();}
 
